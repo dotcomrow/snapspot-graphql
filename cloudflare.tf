@@ -21,7 +21,7 @@ resource "null_resource" "project_id" {
   provisioner "local-exec" {
     command = "${path.module}/scripts/get_project_id.sh"
     environment = {
-       project = "pulsedb-${var.environment}"
+       project = "snapspot-${var.environment}"
     }
   }
 }
@@ -60,12 +60,12 @@ resource "cloudflare_workers_script" "project_script" {
 
   r2_bucket_binding {
     name        = "SCHEMAS_BUCKET"
-    bucket_name = "schemas-pulsedb-${var.environment}"
+    bucket_name = "schemas-snapspot-${var.environment}"
   }
 
   plain_text_binding {
     name = "PULSE_DATASET"
-    text = "pulsedb_dataset"
+    text = "snapspot_dataset"
   }
 
   plain_text_binding {
