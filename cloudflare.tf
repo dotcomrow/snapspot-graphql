@@ -60,12 +60,12 @@ resource "cloudflare_workers_script" "project_script" {
 
   r2_bucket_binding {
     name        = "SCHEMAS_BUCKET"
-    bucket_name = "schemas-snapspot-${var.environment}"
+    bucket_name = "schemas-snapspotdb-${var.environment}"
   }
 
   plain_text_binding {
     name = "PULSE_DATASET"
-    text = "snapspot_dataset"
+    text = "snapspotdb_dataset"
   }
 
   plain_text_binding {
