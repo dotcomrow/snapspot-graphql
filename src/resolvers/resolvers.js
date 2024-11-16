@@ -7,10 +7,6 @@ import * as ModifyPictures from '../modules/pictures/modify-requests/modify-pict
 var returnResolvers = [];
 
 returnResolvers.push(Hello.default);
-returnResolvers.push(User.default);
-returnResolvers.push(Config.default);
-returnResolvers.push(Http.default);
-returnResolvers.push(CMS.default);
 returnResolvers.push(FetchPictures.default);
 returnResolvers.push(ModifyPictures.default);
 
