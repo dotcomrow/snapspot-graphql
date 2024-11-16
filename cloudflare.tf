@@ -21,7 +21,7 @@ resource "null_resource" "project_id" {
   provisioner "local-exec" {
     command = "${path.module}/scripts/get_project_id.sh"
     environment = {
-       project = "snapspot-${var.environment}"
+       project = "snapspotdb-${var.environment}"
     }
   }
 }
